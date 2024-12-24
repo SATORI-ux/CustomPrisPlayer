@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Mobile-first Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Mobile Music Player</title>
+
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- iOS Safari Web App Meta (optional) -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+
+  <!-- Slideshow Container -->
+  <div class="slideshow-container">
+    <!-- Slide 1 (active by default) -->
+    <div class="slide active"
+      style="background-image: url('images/slide1.png');">
+    </div>
+	 <!-- Slide 2 -->
+    <div class="slide"
+      style="background-image: url('images/slide2.jpg');">
+    </div>
+    <!-- Slide 3 -->
+    <div class="slide"
+      style="background-image: url('images/slide3.png');">
+    </div>
+    <!-- Slide 4 -->
+    <div class="slide"
+      style="background-image: url('images/slide4.png');">
+    </div>
+	<!-- Slide 5 -->
+    <div class="slide"
+      style="background-image: url('images/slide5.png');">
+    </div>
+	<!-- Slide 6 -->
+    <div class="slide"
+      style="background-image: url('images/slide6.jpg');">
+    </div>
+	<!-- Slide 7 -->
+    <div class="slide"
+      style="background-image: url('images/slide7.png');">
+    </div>
+	<!-- Slide 8 -->
+    <div class="slide"
+      style="background-image: url('images/slide8.jpg');">
+    </div>
+  </div>
+
+  <!-- Music Player -->
+  <div class="player-container">
+    <div class="player-artwork">
+      <img src="images/album-cover.jpeg" alt="Album Cover" />
+    </div>
+
+    <div class="player-info">
+      <!-- Song Title and Artist -->
+      <h2 id="song-title">Song Title</h2>
+      <p id="artist-name">Artist Name</p>
+    </div>
+
+    <!-- Audio Element -->
+    <!-- "autoplay" + "playsinline" (iOS) + optional "muted" help mobile autoplay -->
+    <audio
+      id="audio-player"
+      autoplay
+      playsinline
+      muted
+    ></audio>
+
+    <!-- Controls Container -->
+    <div class="controls">
+      <button id="prev-btn" class="control-btn">
+        <img src="icons/previous.png" alt="Previous" class="button-icon">
+      </button>
+
+      <button id="play-pause-btn" class="control-btn">
+        <img src="icons/play.png" alt="Play" id="play-icon" class="button-icon active">
+        <img src="icons/pause.png" alt="Pause" id="pause-icon" class="button-icon">
+      </button>
+
+      <button id="next-btn" class="control-btn">
+        <img src="icons/next.png" alt="Next" class="button-icon">
+      </button>
+    </div>
+
+    <!-- Slider for current song time -->
+    <input
+      type="range"
+      id="seek-slider"
+      min="0"
+      value="0"
+      step="1"
+    />
+  </div>
+
+  <!-- Link to JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
